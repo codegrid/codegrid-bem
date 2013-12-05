@@ -1,6 +1,6 @@
 (function() {
 
-  // Block内で使われているclass名の紐付け
+  // Block内で使われているclass名の定義
 
   var selector_block = '.togglable-panel';
   var selector_button = '.togglable-panel__button';
@@ -54,7 +54,7 @@
       }
     },
 
-    // event things
+    // イベントに関するメソッド群
 
     on: function(eventName, callback) {
       this.$el.on(eventName, callback);
@@ -63,7 +63,7 @@
       this.$el.off(eventName, callback);
     },
 
-    // パネルを開閉する振る舞いをbind
+    // クリックイベントを拾って自身をtoggleする
 
     _eventify: function() {
       var self =  this;
@@ -81,7 +81,7 @@
       var $panel = $(el);
       // インスタンスの生成
       var instance = new TogglablePanel($panel);
-      // jQuery Data APIを利用し、生成したインスタンスを紐付ける
+      // jQueryのdataメソッドを利用し、生成したインスタンスを紐付ける
       $panel.data(widget_data_key, instance);
     });
   };
