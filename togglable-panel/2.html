@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.wrapper {
+  width:300px;
+  margin:0 auto;
+  padding:20px 0;
+}
+.buttons {
+  padding:0 0 20px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<link rel="stylesheet" href="togglable-panel.css">
+<script src="togglable-panel.js"></script>
+
+<script>
+$(function() {
+
+  // jQuery Data APIで紐付けしたインスタンスを呼び出してpanelに代入し、
+  // panelからインスタンスにアクセスできるようにする
+  var panel = $('#panel1').data('togglablePanel');
+
+  // インスタンスのイベントを拾ったら、アラートを表示
+  panel.on('panel.open', function() {
+    alert('panel.open event fired.');
+  });
+  panel.on('panel.close', function() {
+    alert('panel.close event fired.');
+  });
+
+  // ボタンクリックで、インスタンスのメソッドを呼び出し
+  $('#open').on('click', function() {
+    panel.open();
+  });
+  $('#close').on('click', function() {
+    panel.close();
+  });
+  $('#toggle').on('click', function() {
+    panel.toggle();
+  });
+
+});
+</script>
+
+</head>
+<body><div class="wrapper">
+
+<div class="buttons">
+  <button id="open">open</button>
+  <button id="close">close</button>
+  <button id="toggle">toggle</button>
+</div>
+
+<div class="togglable-panel" id="panel1">
+  <div class="togglable-panel__button">Toogle!!</div>
+  <div class="togglable-panel__body">
+    The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+  </div>
+</div>
+
+</div></body>
+</html>
