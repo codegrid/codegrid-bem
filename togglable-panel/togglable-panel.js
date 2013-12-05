@@ -74,7 +74,7 @@
 
   };
 
-  // to jQuery plugin
+  // jQuery plugin化
 
   $.fn.togglablePanel = function() {
     return this.each(function(i, el) {
@@ -86,19 +86,19 @@
     });
   };
 
-  // setup method
+  // セットアップメソッド
 
   TogglablePanel.setup = function(rootEl) {
     $(selector_block, rootEl).togglablePanel();
   };
 
-  // do setup
+  // セットアップ実行
 
   $(function() {
     TogglablePanel.setup('body');
   });
 
-  // attach to global
+  // TogglablePanelをグローバルで実行可能にする
 
   window.TogglablePanel = TogglablePanel;
 
