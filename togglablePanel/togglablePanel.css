@@ -1,20 +1,20 @@
-.togglable-panel {
+.togglablePanel {
   border:1px solid #000;
   margin:0 0 10px;
 }
-  .togglable-panel__button {
+  .togglablePanel__button {
     padding:10px 15px;
     background:#aaa;
     cursor:pointer;
   }
-  .togglable-panel__button_state_open {
+  .togglablePanel__button_state_open {
     background:#eee;
   }
-  .togglable-panel__body {
+  .togglablePanel__body {
     border-top:1px solid #000;
     padding:10px 15px;
     display:none;
   }
-  .togglable-panel__body_state_open {
+  .togglablePanel__body_state_open {
     display:block;
   }

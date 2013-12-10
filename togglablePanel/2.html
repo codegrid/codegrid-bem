@@ -17,17 +17,17 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-<link rel="stylesheet" href="togglable-panel.css">
-<script src="togglable-panel.js"></script>
+<link rel="stylesheet" href="togglablePanel.css">
+<script src="togglablePanel.js"></script>
 
 <script>
 $(function() {
 
-  // jQueryのdataメソッドで紐付けしたインスタンスを呼び出してpanelに代入し、
-  // panelからインスタンスにアクセスできるようにする
-  var panel = $('#panel1').data('togglablePanel');
+  // パネルのインスタンスを用意
+  var $block = $('#panel1');
+  var panel = new TogglablePanel($block);
 
-  // インスタンスのイベントを拾ったら、アラートを表示
+  // イベントを設定
   panel.on('panel.open', function() {
     alert('panel.open event fired.');
   });
@@ -35,7 +35,7 @@ $(function() {
     alert('panel.close event fired.');
   });
 
-  // ボタンクリックで、インスタンスのメソッドを呼び出し
+  // ボタンの押下に合わせてメソッドを呼ぶ
   $('#open').on('click', function() {
     panel.open();
   });
@@ -58,9 +58,9 @@ $(function() {
   <button id="toggle">toggle</button>
 </div>
 
-<div class="togglable-panel" id="panel1">
-  <div class="togglable-panel__button">Toogle!!</div>
-  <div class="togglable-panel__body">
+<div class="togglablePanel" id="panel1">
+  <div class="togglablePanel__button">Toogle!!</div>
+  <div class="togglablePanel__body">
     The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
   </div>
 </div>

@@ -14,29 +14,38 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-<link rel="stylesheet" href="togglable-panel.css">
-<script src="togglable-panel.js"></script>
+<link rel="stylesheet" href="togglablePanel.css">
+<script src="togglablePanel.js"></script>
+
+<script>
+$(function() {
+  $('.togglablePanel').each(function() {
+    var $block = $(this);
+    new TogglablePanel($block);
+  });
+});
+</script>
 
 </head>
 <body><div class="wrapper">
 
-<div class="togglable-panel">
-  <div class="togglable-panel__button">Toogle!!</div>
-  <div class="togglable-panel__body">
+<div class="togglablePanel">
+  <div class="togglablePanel__button">Toogle!!</div>
+  <div class="togglablePanel__body">
     The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
   </div>
 </div>
 
-<div class="togglable-panel">
-  <div class="togglable-panel__button">Toogle!!</div>
-  <div class="togglable-panel__body">
+<div class="togglablePanel">
+  <div class="togglablePanel__button">Toogle!!</div>
+  <div class="togglablePanel__body">
     The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
   </div>
 </div>
 
-<div class="togglable-panel">
-  <div class="togglable-panel__button">Toogle!!</div>
-  <div class="togglable-panel__body">
+<div class="togglablePanel">
+  <div class="togglablePanel__button">Toogle!!</div>
+  <div class="togglablePanel__body">
     The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
   </div>
 </div>
