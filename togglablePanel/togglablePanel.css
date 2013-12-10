@@ -2,8 +2,8 @@
   border:1px solid #000;
   margin:0 0 10px;
 }
-  /* ボタン */
 
+  /* ボタン */
   .togglablePanel__button {
     padding:10px 15px;
     background:#aaa;
@@ -14,7 +14,6 @@
   }
 
   /* ボディ部 */
-  
   .togglablePanel__body {
     border-top:1px solid #000;
     padding:10px 15px;
