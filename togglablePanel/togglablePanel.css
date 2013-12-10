@@ -2,6 +2,8 @@
   border:1px solid #000;
   margin:0 0 10px;
 }
+  /* ボタン */
+
   .togglablePanel__button {
     padding:10px 15px;
     background:#aaa;
@@ -10,6 +12,9 @@
   .togglablePanel__button_state_open {
     background:#eee;
   }
+
+  /* ボディ部 */
+  
   .togglablePanel__body {
     border-top:1px solid #000;
     padding:10px 15px;
