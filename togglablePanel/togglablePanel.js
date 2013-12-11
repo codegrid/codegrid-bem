@@ -1,9 +1,5 @@
 (function() {
 
-  // コンフィグ
-
-  var blockName = 'togglablePanel';
-
   // ブロックを表現するコンストラクタ
 
   var TogglablePanel = function($block) {
