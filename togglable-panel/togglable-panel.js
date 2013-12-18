@@ -58,7 +58,7 @@
     // ブロック内部のエレメントを探す
     
     findElement: function(elementName) {
-      var fullElementName = 'togglablePanel__' + elementName;
+      var fullElementName = 'togglable-panel__' + elementName;
       var selector = '.' + fullElementName;
       var $element = this.$block.find(selector);
       $element.fullElementName = fullElementName;
